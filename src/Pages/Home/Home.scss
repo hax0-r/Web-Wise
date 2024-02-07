@@ -1,0 +1,11 @@
+.home{
+    .page1{
+        .container{
+            video{
+                width: 100%;
+                height: calc(100vh - 5.3rem);
+                object-fit: cover;
+            }
+        }
+    }
+}

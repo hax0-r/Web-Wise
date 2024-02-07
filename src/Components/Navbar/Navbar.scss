@@ -1,0 +1,365 @@
+@font-face {
+    font-family: Nekst-Medium;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-medium.otf);
+}
+
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+nav {
+    background-color: #000000;
+    height: 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0 2rem;
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                font-family: Nekst-Medium;
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 99%;
+                text-decoration: none;
+                color: #ffffff;
+                letter-spacing: .1rem;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: 1rem;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: rgb(255, 255, 255);
+                        font-family: Nekst-Medium;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 99%;
+                        letter-spacing: -3%;
+                        text-decoration: none;
+                        padding: 1rem;
+                        transition: 200ms all;
+
+                        &:hover {
+                            color: #904bff;
+                        }
+
+                    }
+
+                    .active {
+                        color: #904bff;
+                    }
+                }
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 42.66px;
+                background: rgb(95, 41, 183);
+                border: none;
+                color: rgb(255, 255, 255);
+                font-family: Nekst-Medium;
+                font-size: 20px;
+                font-weight: 400;
+                letter-spacing: -3%;
+                cursor: pointer;
+                user-select: none;
+                position: relative;
+                overflow: hidden;
+                height: 2.625rem;
+                padding: 1.7rem 1.7rem;
+
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+
+                    i {
+                        color: transparent;
+                        user-select: none;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: inherit;
+                    background: rgb(83, 24, 179);
+                    transition: all 0.475s;
+                }
+            }
+        }
+
+        .navToggle {
+            display: none;
+        }
+    }
+}
+
+@include media(1200px) {
+    nav {
+
+        .main {
+
+            .left {
+
+                h1 {
+                    font-size: 33px;
+                }
+            }
+
+            .right {
+                gap: 2rem;
+
+                ul {
+                    gap: .5rem;
+
+                    li {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                button {
+                    font-size: 18px;
+                    height: 2rem;
+                    padding: 1.6rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include media(998px) {
+    nav {
+
+        .main {
+
+            .left {
+
+                h1 {
+                    font-size: 33px;
+                }
+            }
+
+            .right {
+                display: none;
+            }
+
+            .navToggle {
+                display: block;
+                color: #ffffff;
+                transition: 200ms all;
+
+                #checkbox2 {
+                    display: none;
+                }
+
+                .toggle2 {
+                    position: relative;
+                    width: 35px;
+                    height: 27px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    transition-duration: .5s;
+                    transform: rotate(-45deg);
+                }
+
+                .bars {
+                    width: 100%;
+                    height: 5.3px;
+                    background-color: #ffffff;
+                    border-radius: 6px;
+                }
+
+                #bar5 {
+                    transition-duration: .8s;
+                }
+
+                #bar4,
+                #bar6 {
+                    width: 80%;
+                }
+
+                #checkbox2:checked+.toggle2 .bars {
+                    position: absolute;
+                    transition-duration: .5s;
+                }
+
+                #checkbox2:checked+.toggle2 #bar5 {
+                    transform: scaleX(0);
+                    transition-duration: .5s;
+                }
+
+                #checkbox2:checked+.toggle2 #bar4 {
+                    width: 100%;
+                    transform: rotate(45deg);
+                    transition-duration: .5s;
+                }
+
+                #checkbox2:checked+.toggle2 #bar6 {
+                    width: 100%;
+                    transform: rotate(-45deg);
+                    transition-duration: .5s;
+                }
+
+                #checkbox2:checked+.toggle2 {
+                    transition-duration: .5s;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include media(500px) {
+    nav {
+        padding: 0 1rem;
+
+        .main {
+
+            .left {
+                gap: .5rem;
+
+                svg {
+                    width: 40px;
+                }
+
+                h1 {
+                    font-size: 25px;
+                }
+            }
+
+            .navToggle {
+
+                .toggle2 {
+                    width: 30px;
+                    height: 22px;
+                    gap: 5px;
+                }
+
+                .bars {
+                    height: 4.8px;
+                }
+            }
+        }
+    }
+}
+
+.responsiveNavbarClose{
+    display: none;
+}
+.responsiveNavbar {
+    position: absolute;
+    background-color: #000000;
+    width: 20rem;
+    height: calc(100vh - 5rem);
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+
+        .up {
+            .navResLogo{
+            }
+            h1 {
+                color: #fff;
+            }
+            
+            ul {
+                margin-top: 2.5rem;
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    border-radius: 10px;
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-Medium;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 99%;
+                    letter-spacing: -3%;
+                    text-decoration: none;
+                    padding: 1.4rem 1rem;
+                    transition: 600ms ease-in-out;
+                    margin: .2rem .7rem;
+                    
+                    &:hover {
+                        background: linear-gradient(to left, #00000017, #ffffff17, #ffffff17);
+                        transition:background 600ms all;
+                    }
+                }
+                
+                .active {
+                    background: linear-gradient(to left, #00000017, #ffffff17, #ffffff17);
+                }
+            }
+
+            .navResLogo {
+                display: flex;
+            }
+        }
+
+        button {
+            padding: 1.4rem 0;
+            color: rgb(255, 255, 255);
+            font-family: Nekst-Medium;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 99%;
+            letter-spacing: -3%;
+            padding: 1.5rem 1rem;
+            transition: 300ms all;
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            border-top: 2px solid #ffffff17;
+
+            &:hover {
+                background-color: #ffffff17;
+                border-top: 2px solid #ffffff00;
+            }
+        }
+    }
+}
