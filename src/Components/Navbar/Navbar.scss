@@ -289,6 +289,7 @@ nav {
     display: none;
 }
 .responsiveNavbar {
+    z-index: 999;
     position: absolute;
     background-color: #000000;
     width: 20rem;

@@ -1,10 +1,1511 @@
-.home{
-    .page1{
-        .container{
-            video{
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@font-face {
+    font-family: Nekst-Medium;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-medium.otf);
+}
+
+@font-face {
+    font-family: Nekst-SemiBold;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-semibold.otf);
+}
+
+@font-face {
+    font-family: Nekst-light;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-light.otf);
+}
+
+@font-face {
+    font-family: Nekst-regular;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-regular.otf);
+}
+
+.home {
+    .page1 {
+        position: relative;
+
+        .container {
+            position: relative;
+            min-height: calc(100vh - 5rem);
+            overflow: hidden;
+
+            video {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: calc(100vh - 5.3rem);
+                min-height: calc(100vh - 5rem);
                 object-fit: cover;
+            }
+
+            .inside {
+
+                padding: 5vw 0 0 5vw;
+
+                h1 {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: clamp(3rem, 6.39rem, 7rem);
+                    font-weight: 400;
+                    line-height: 95%;
+                    letter-spacing: -2%;
+                    margin-bottom: 2.2rem;
+                    color: #FFFFFF;
+
+                    span {
+                        background: linear-gradient(251.46deg, #FFFFFF 13.67%, #5F29B7 124.09%);
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        max-width: 47.81rem;
+                        width: 100%;
+
+                    }
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 1rem 2rem;
+                    border-radius: 2.67rem;
+                    border: none;
+                    background: rgb(95, 41, 183);
+                    color: rgb(255, 255, 255);
+                    font-size: 1.75rem;
+                    font-weight: 400;
+                    line-height: 93%;
+                    cursor: pointer;
+                    letter-spacing: -3%;
+                }
+            }
+
+            .bottom {
+                width: 100%;
+                position: absolute;
+                bottom: 3rem;
+
+                .moving {
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    gap: 1rem;
+
+                    .moving-in {
+                        color: #FFFFFF;
+                        white-space: nowrap;
+
+                        // animation: moving 5s linear infinite;
+                        h1 {
+                            padding: 1.95rem 4.9rem;
+                            border-radius: 1.88rem;
+                            background: rgb(14, 9, 21);
+                            font-family: Nekst-regular;
+                            letter-spacing: .1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @include media(1280px) {
+            .container {
+                .inside {
+                    padding: 4vw 0 0 4vw;
+
+                    h1 {
+                        font-size: 5rem;
+                        margin-bottom: 1.8rem;
+                    }
+
+                    button {
+                        padding: .8rem 2rem;
+                        font-size: 1.55rem;
+                    }
+                }
+
+                .bottom {
+                    position: unset;
+                    bottom: unset;
+                    margin: 4rem 0 1rem 0;
+
+                    .moving {
+                        .moving-in {
+                            h1 {
+                                padding: 1.55rem 4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        @include media(998px) {
+            .container {
+                .bottom {
+                    display: none;
+                }
+            }
+
+        }
+
+        @include media(768px) {
+            .container {
+                .inside {
+                    padding: 12vw 0 0 4vw;
+                }
+
+            }
+        }
+
+        @include media(500px) {
+            .container {
+                .inside {
+                    padding: 12vw 4vw 0 4vw;
+
+                    h1 {
+                        font-size: 4rem;
+                    }
+
+                    button {
+                        padding: .4rem 1.8rem;
+                        font-size: 1.20rem;
+
+                        svg {
+                            width: 50px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .page2 {
+        background-color: #000;
+
+        .main {
+            position: relative;
+            padding: 7vw 3vw;
+            min-height: 150vh;
+            background: url(../../assets/Home/page2Bg.png) center;
+            background-size: cover;
+
+            .numbers {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .4rem 2rem;
+                border-radius: 1rem;
+                border: 2px solid #5e28b6;
+                border-bottom: none;
+                margin-bottom: 7vw;
+                // background: linear-gradient(165.43deg, rgb(255, 255, 255) 9.757%, rgb(95, 41, 183) 61.982%);
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                    font-size: 3.75rem;
+                    font-weight: 400;
+                    line-height: 93%;
+                    font-family: Nekst-Light;
+                    letter-spacing: -4%;
+                }
+
+                p {
+                    font-family: Nekst-Light;
+                    color: rgb(145, 145, 145);
+                    font-size: 0.94rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+            }
+
+            .total {
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                    font-size: 15.63rem;
+                    font-family: Nekst-Light;
+                    font-weight: 400;
+                    line-height: 93%;
+                    letter-spacing: -4%;
+                    margin-bottom: 2rem;
+                }
+
+                h5 {
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-Regular;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                    text-align: left;
+                }
+            }
+
+            .cardDiv {
+                position: absolute;
+                right: 5vw;
+                bottom: 4vw;
+
+                .card {
+                    /* Group 25 */
+                    width: 23.5rem;
+                    height: 18.25rem;
+                    border: 2px solid #5F29B7;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1.5rem;
+                    border-radius: 2.5rem;
+                    margin-bottom: 1rem;
+
+                    h1 {
+                        color: rgb(255, 255, 255);
+                        font-family: Nekst-Light;
+                        font-size: 5rem;
+                        font-weight: 400;
+                        line-height: 93%;
+                        letter-spacing: -4%;
+                    }
+
+                    p {
+                        color: rgb(255, 255, 255);
+                        font-family: Nekst-Regular;
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        line-height: 103%;
+                        letter-spacing: -4%;
+                    }
+                }
+
+                .twoCard {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                }
+            }
+
+            .actual {
+                position: absolute;
+                bottom: 5vw;
+                left: 2vw;
+
+                p {
+                    color: rgb(110, 100, 125);
+                    font-family: Nekst-Regular;
+                    font-size: 0.94rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+            }
+
+            @include media(1280px) {
+                .total {
+
+                    h1 {
+                        font-size: 12.63rem;
+                    }
+
+                    h5 {
+                        font-size: 2.3rem;
+                    }
+                }
+
+                .cardDiv {
+                    display: flex;
+                    justify-content: end;
+                    flex-direction: column;
+                    align-items: end;
+                    position: unset;
+
+                    .card {
+                        margin: 0 1rem 1rem 0;
+
+                    }
+
+                    .twoCard {
+                        gap: unset;
+                    }
+                }
+            }
+
+            @include media(998px) {
+                .numbers {
+
+                    h1 {
+                        font-size: 2.75rem;
+                    }
+
+                    p {
+                        font-size: 0.84rem;
+                    }
+                }
+
+                .total {
+
+                    h1 {
+                        font-size: 7.5rem;
+                    }
+
+                    h5 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .actual {
+                    position: unset;
+                    padding: 2vw 0;
+                    display: flex;
+                    justify-content: end;
+                    padding-right: 1rem;
+
+                    p {
+                        color: rgb(110, 100, 125);
+                        font-family: Nekst-Regular;
+                        font-size: 0.94rem;
+                        font-weight: 400;
+                        line-height: 103%;
+                        letter-spacing: -4%;
+                    }
+                }
+            }
+
+            @include media(852px) {
+                .cardDiv {
+                    margin-top: 6vw;
+                    align-items: unset;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .card {
+                        margin: unset;
+                    }
+
+                    .twoCard {
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+                    }
+                }
+            }
+
+            @include media(500px) {
+                .numbers {
+                    border-left: none;
+                    border-right: none;
+
+                    h1 {
+                        padding-top: 1rem;
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+
+                .total {
+
+                    h1 {
+                        font-size: 4.5rem;
+                    }
+
+                    h5 {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .cardDiv {
+                    margin-top: 4rem;
+
+                    .card {
+                        max-width: 23.5rem;
+                        width: 100%;
+                        height: 13rem;
+                        margin: unset;
+
+                        h1 {
+                            font-size: 3rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .actual {
+
+                    p {
+                        font-size: 0.80rem;
+                        padding: 1rem 0 1rem 0;
+                    }
+                }
+            }
+        }
+
+        @include media(500px) {
+            .main {
+                min-height: unset;
+            }
+        }
+    }
+
+    .page3 {
+        background-color: #000;
+        padding: 5vw 3vw;
+
+        .main {
+
+            .numbers {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .4rem 2rem;
+                border-radius: 1rem;
+                border: 2px solid #5e28b6;
+                border-bottom: none;
+                margin-bottom: 7vw;
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                    font-size: 3.75rem;
+                    font-weight: 400;
+                    line-height: 93%;
+                    font-family: Nekst-Light;
+                    letter-spacing: -4%;
+                }
+
+                p {
+                    font-family: Nekst-Light;
+                    color: rgb(145, 145, 145);
+                    font-size: 0.94rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+
+                .left {
+                    img {
+                        max-width: 50rem;
+                        width: 100%;
+                    }
+                }
+
+                .right {
+                    h1 {
+                        background: linear-gradient(165.43deg, rgb(255, 255, 255), rgb(95, 41, 183));
+                        -webkit-background-clip:
+                            text;
+                        -webkit-text-fill-color:
+                            transparent;
+                        background-clip:
+                            text;
+                        text-fill-color:
+                            transparent;
+                        font-family: Nekst-Light;
+                        font-size: 8.13rem;
+                        font-weight: 400;
+                        line-height: 93%;
+                        letter-spacing: -4%;
+                        text-align: left;
+                    }
+
+                    div {
+                        h5 {
+                            color: rgb(255, 255, 255);
+                            font-family: Nekst-Regular;
+                            font-size: 2.5rem;
+                            font-weight: 400;
+                            line-height: 93%;
+                            letter-spacing: -4%;
+                            padding: 1.5rem 0;
+                        }
+
+                        p {
+                            color: rgb(183, 177, 196);
+                            font-family: Nekst-Regular;
+                            font-size: 1.13rem;
+                            font-weight: 300;
+                            line-height: 103%;
+                            letter-spacing: -4%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1460px) {
+            .main {
+
+                .container {
+                    .left {
+                        img {
+                            max-width: 38rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 7.13rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1275px) {
+            .main {
+
+                .container {
+                    .left {
+                        img {
+                            max-width: 35rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 5rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 2.2rem;
+                            }
+
+                            p {
+                                font-size: 1.05rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(998px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 29rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 2rem;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                .numbers {
+
+                    h1 {
+                        font-size: 2.75rem;
+                    }
+
+                    p {
+                        font-size: 0.84rem;
+                    }
+                }
+            }
+        }
+
+        @include media(850px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 25.3rem;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .numbers {
+
+                    h1 {
+                        font-size: 2.75rem;
+                    }
+
+                    p {
+                        font-size: 0.84rem;
+                    }
+                }
+            }
+        }
+
+        @include media(766px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 35rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 4.5rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 2rem;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(500px) {
+            .main {
+                .numbers {
+                    border-left: none;
+                    border-right: none;
+
+                    h1 {
+                        padding-top: 1rem;
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+
+                .container {
+
+                    .right {
+                        h1 {
+                            font-size: 3.2rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 1.5rem;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page4 {
+        padding: 3vw 3vw 5vw 3vw;
+        background-color: #000;
+
+        .main {
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap-reverse;
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    h1 {
+                        border: 2px solid #5e28b6;
+                        border-radius: 1rem;
+                        border-bottom: none;
+                        border-left: none;
+                        border-right: none;
+                        padding-top: .8rem;
+                        background: linear-gradient(165.43deg, rgb(255, 255, 255), rgb(95, 41, 183));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                        font-family: Nekst-Light;
+                        font-size: 8.13rem;
+                        font-weight: 400;
+                        line-height: 93%;
+                        letter-spacing: -4%;
+                    }
+
+                    h4 {
+                        color: rgb(123, 112, 141);
+                        font-family: Nekst-Medium;
+                        font-size: 2.5rem;
+                        font-weight: 400;
+                        line-height: 108%;
+                        letter-spacing: -4%;
+                        max-width: 35.69rem;
+                        width: 100%;
+
+                        span {
+                            font-family: Nekst-Light;
+                            font-weight: 600;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .right {
+                    img {
+                        max-width: 50rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+
+        @include media(1411px) {
+            .main {
+                .container {
+                    .left {
+                        h1 {
+                            font-size: 7.13rem;
+                        }
+
+                        h4 {
+                            font-size: 2.2rem;
+                        }
+                    }
+
+                    .right {
+                        img {
+                            max-width: 35rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1275px) {
+            .main {
+                .container {
+                    .left {
+                        h1 {
+                            font-size: 5rem;
+                        }
+
+                        h4 {
+                            font-size: 1.7rem;
+                            max-width: 25rem;
+
+                        }
+                    }
+
+                    .right {
+                        img {
+                            max-width: 25rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(998px) {
+            .main {
+                padding-top: 2rem;
+
+                .container {
+                    .left {
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        h4 {
+                            font-size: 1.5rem;
+                            max-width: 22rem;
+                        }
+                    }
+
+                    .right {
+                        img {
+                            max-width: 23rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(766px) {
+            .main {
+                padding-top: 2rem;
+
+                .container {
+                    .left {
+                        h1 {
+                            font-size: 4.5rem;
+                        }
+
+                        h4 {
+                            font-size: 1.7rem;
+                            max-width: 27rem;
+                        }
+                    }
+
+                    .right {
+                        padding-bottom: 0rem;
+
+                        img {
+                            max-width: 30rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(500px) {
+            .main {
+
+                .container {
+                    .left {
+                        h1 {
+                            border: none;
+                            font-size: 3.2rem;
+                            padding-top: 1.5rem;
+                        }
+
+                        h4 {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include media(500px) {
+        .page4 {
+            padding-top: 13vw;
+        }
+    }
+
+    .page5 {
+        background-color: #000;
+        padding: 3vw 3vw 5vw 3vw;
+
+        .main {
+
+            .container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+
+                .left {
+                    img {
+                        max-width: 50rem;
+                        width: 100%;
+                    }
+                }
+
+                .right {
+                    h1 {
+                        background: linear-gradient(165.43deg, rgb(255, 255, 255), rgb(95, 41, 183));
+                        -webkit-background-clip:
+                            text;
+                        -webkit-text-fill-color:
+                            transparent;
+                        background-clip:
+                            text;
+                        text-fill-color:
+                            transparent;
+                        font-family: Nekst-Light;
+                        font-size: 8.13rem;
+                        font-weight: 400;
+                        line-height: 93%;
+                        letter-spacing: -4%;
+                        text-align: left;
+                    }
+
+                    div {
+                        h5 {
+                            color: rgb(255, 255, 255);
+                            font-family: Nekst-Regular;
+                            font-size: 2.5rem;
+                            font-weight: 400;
+                            line-height: 93%;
+                            letter-spacing: -4%;
+                            padding: 1.5rem 0;
+                            max-width: 25.88rem;
+                            width: 100%;
+                        }
+
+                        p {
+                            color: rgb(183, 177, 196);
+                            font-family: Nekst-Regular;
+                            font-size: 1.13rem;
+                            font-weight: 300;
+                            line-height: 103%;
+                            letter-spacing: -4%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1460px) {
+            .main {
+
+                .container {
+                    .left {
+                        img {
+                            max-width: 38rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 7.13rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1275px) {
+            .main {
+
+                .container {
+                    .left {
+                        img {
+                            max-width: 32rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 5rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 2.2rem;
+                            }
+
+                            p {
+                                font-size: 1.05rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(998px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 25rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        padding-left: 1rem;
+
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 1.7rem;
+                                max-width: 20rem;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @include media(850px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 25.3rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+
+                        div {
+                            h5 {
+                                font-size: 1.7rem;
+                                max-width: 15rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(766px) {
+            .main {
+                .container {
+                    .left {
+                        img {
+                            max-width: 35rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .right {
+                        h1 {
+                            font-size: 4.5rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 2rem;
+                                max-width: 30rem;
+                            }
+
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(500px) {
+            .main {
+                padding-top: 6rem;
+
+                .container {
+
+                    .right {
+                        h1 {
+                            font-size: 3.2rem;
+                        }
+
+                        div {
+                            h5 {
+                                font-size: 1.5rem;
+                                max-width: 25rem;
+                            }
+
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page7 {
+        background-color: #000;
+
+        .main {
+            border-radius: 2.56rem;
+            background: linear-gradient(152.20deg, rgb(112, 97, 170) -31.862%, rgb(52, 14, 115) 82.341%);
+            padding: 2rem;
+
+            .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5rem;
+                padding: 1rem 2rem 0 2rem;
+                border: 2px solid #ffffff25;
+                border-radius: 1rem;
+                border-bottom: none;
+
+                h1 {
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-SemiBold;
+                    font-size: 4.38rem;
+                    font-weight: 400;
+                    line-height: 93%;
+                    letter-spacing: -4%;
+                }
+
+                p {
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-Regular;
+                    font-size: 0.94rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 3rem;
+                flex-wrap: wrap;
+
+                .left {
+                    ul {
+                        li {
+                            list-style: nnpm one;
+                            font-family: Nekst-Medium;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 150%;
+                            letter-spacing: -1%;
+                            text-align: left;
+                            color: #7E63B9;
+
+                        }
+                    }
+                }
+
+                .right {
+
+                    .swiper {
+                        max-width: 340px;
+                        width: 100%;
+                        height: 420px;
+                    }
+
+                    .swiper-slide {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 18px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+
+                    .swiper-slide:nth-child(1n) {
+                        background-color: rgb(206, 17, 17);
+                    }
+
+                    .swiper-slide:nth-child(2n) {
+                        background-color: rgb(0, 140, 255);
+                    }
+
+                    .swiper-slide:nth-child(3n) {
+                        background-color: rgb(10, 184, 111);
+                    }
+
+                    .swiper-slide:nth-child(4n) {
+                        background-color: rgb(211, 122, 7);
+                    }
+
+                    .swiper-slide:nth-child(5n) {
+                        background-color: rgb(118, 163, 12);
+                    }
+
+                    .swiper-slide:nth-child(6n) {
+                        background-color: rgb(180, 10, 47);
+                    }
+
+                    .swiper-slide:nth-child(7n) {
+                        background-color: rgb(35, 99, 19);
+                    }
+
+                    .swiper-slide:nth-child(8n) {
+                        background-color: rgb(0, 68, 255);
+                    }
+
+                    .swiper-slide:nth-child(9n) {
+                        background-color: rgb(218, 12, 218);
+                    }
+
+                    .swiper-slide:nth-child(10n) {
+                        background-color: rgb(54, 94, 77);
+                    }
+
+                }
+            }
+        }
+
+        @include media(998px) {
+            .main {
+
+                .head {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .container {
+
+                    .right {
+                        .swiper {
+                            width: 290px;
+                            height: 370px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include media(768px) {
+            .main {
+
+                .head {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+
+                .container {
+
+                    .left {
+                        ul {
+                            padding-bottom: 3rem;
+                        }
+                    }
+
+                    .right {
+                        padding-bottom: 2rem;
+                        .swiper {
+                            width: 250px;
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page8 {
+        background-color: #000;
+
+        .main {
+            background: url(../../assets/Home/pg8.png) center;
+            padding: 4vw 5vw;
+            background-size: cover;
+            object-fit: cover;
+            display: flex;
+            gap: 4rem;
+            min-height: 100vh;
+            justify-content: space-around;
+            flex-direction: column;
+
+            h1 {
+                padding: 1rem 1rem 0 1rem;
+                border: 2px solid #ffffff52;
+                border-bottom: none;
+                border-radius: 1rem;
+                color: rgb(255, 255, 255);
+                font-family: Nekst-Regular;
+                font-size: 8.13rem;
+                font-weight: 400;
+                line-height: 93%;
+                letter-spacing: -4%;
+            }
+
+            p {
+                color: rgb(255, 255, 255);
+                font-family: Nekst-Regular;
+                font-size: 2.5rem;
+                font-weight: 400;
+                line-height: 120%;
+                max-width: 25.88rem;
+                width: 100%;
+                letter-spacing: -4%;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-SemiBold;
+                    border: none;
+                    font-size: 2.81rem;
+                    font-weight: 400;
+                    line-height: 93%;
+                    letter-spacing: -4%;
+                    border-radius: 4.38rem;
+                    background: rgb(95, 41, 183);
+                    width: 42.38rem;
+                    padding: 1.45rem 3rem;
+                }
+            }
+
+        }
+
+        @include media(1240px) {
+            .main {
+
+                h1 {
+                    font-size: 7rem;
+                }
+
+                p {
+                    font-size: 2.2rem;
+                }
+
+                div {
+
+                    button {
+                        font-size: 2.61rem;
+                        width: unset;
+                        padding: 1.45rem 5.3rem;
+                    }
+                }
+
+            }
+        }
+
+        @include media(1050px) {
+            .main {
+
+                h1 {
+                    font-size: 6rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+
+                div {
+
+                    button {
+                        font-size: 2.31rem;
+                        width: unset;
+                        padding: 1rem 5rem;
+
+                        svg {
+                            width: 70px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @include media(768px) {
+            .main {
+                gap: unset;
+
+
+                h1 {
+                    font-size: 5rem;
+                }
+
+                p {
+                    font-size: 1.7rem;
+                }
+
+                div {
+
+                    button {
+                        font-size: 2rem;
+                        width: unset;
+                        padding: 1rem 5rem;
+
+                        svg {
+                            width: 60px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @include media(500px) {
+            .main {
+                padding-top: 2rem;
+                gap: unset;
+
+                h1 {
+                    font-size: 3rem;
+                    border-left: none;
+                    border-right: none;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+
+                div {
+
+                    button {
+                        font-size: 1.3rem;
+                        gap: 1rem;
+                        width: unset;
+                        padding: 0 2rem;
+
+                        svg {
+                            width: 40px;
+                        }
+                    }
+                }
+
             }
         }
     }

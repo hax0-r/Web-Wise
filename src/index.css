@@ -1,7 +1,17 @@
+@font-face {
+    font-family: Nekst-Medium;
+    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-medium.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     outline: none;
+    font-family: Nekst-Medium;
+    &::selection{
+        background-color: #5f29b7;
+        color: #ffffff90;
+    }
 }
