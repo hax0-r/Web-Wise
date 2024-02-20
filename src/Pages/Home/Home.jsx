@@ -247,6 +247,43 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="page10">
+          <div className="main">
+            <div className="head">
+              <h1>our partners</h1>
+              <p><span>The Capico platform is theofficial broker </span>of the leading cryptocurrency exchanges</p>
+            </div>
+            <div className="box">
+              <div className="a">
+                <h1>Talha</h1>
+                <p>hello</p>
+              </div>
+              <div className="a">
+                <h1>Talha</h1>
+                <p>hello</p>
+              </div>
+              <div className="a">
+                <h1>Talha</h1>
+                <p>hello</p>
+              </div>
+              <div className="a">
+                <h1>Talha</h1>
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="page11">
+          <div className="main">
+            <h1>Try Capico for free per month</h1>
+            <button>Create an account
+              <svg width="89" height="83" viewBox="0 0 89 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.2" cx="47.5" cy="41.5" r="41" transform="rotate(-90 47.5 41.5)" stroke="white" />
+                <path d="M1 41.5L56 41.5M56 41.5L48.5 34M56 41.5L48.5 49" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </>
   )
