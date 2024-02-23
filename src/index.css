@@ -15,3 +15,22 @@
         color: #ffffff90;
     }
 }
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff49;
+    border: 0px none #ffffff;
+    border-radius: 28px;
+    transition: 200ms all;
+}
+  ::-webkit-scrollbar-track {
+    background: #000001;
+    border: 0px none #00000000;
+    border-radius: 52px;
+  }
