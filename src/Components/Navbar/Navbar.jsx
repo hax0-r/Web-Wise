@@ -1,17 +1,24 @@
-import React, { useRef} from 'react'
+import React, { useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaBarsStaggered } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+import { FaBars } from "react-icons/fa6";
+
 
 
 export default function Navbar() {
 
     const navHideShow = useRef();
+    const [overlayNav, setOverlayNav] = useState(false)
 
-    const navToggle = ()=>{
+    const navToggle = () => {
         navHideShow.current.classList.toggle("responsiveNavbarClose");
     }
 
-    
+    const closeOverlay = () => {
+        setOverlayNav(false)
+    }
+
+
     return (
         <>
             <nav>
@@ -41,31 +48,67 @@ export default function Navbar() {
                             </span>
                         </button>
                     </div>
-                    <div className="navToggle" onClick={navToggle}>
-                        <input id="checkbox2" type="checkbox" />
-                        <label className="toggle toggle2" htmlFor="checkbox2">
-                            <div id="bar4" className="bars" onClick={navToggle}></div>
-                            <div id="bar5" className="bars" onClick={navToggle}></div>
-                            <div id="bar6" className="bars" onClick={navToggle}></div>
-                        </label>
+                    <div className="navToggle" >
+                        {
+                            !overlayNav &&
+                            <FaBars onClick={() => {
+                                setOverlayNav(true),
+                                    navToggle()
+                            }
+                            } />
+                        }
+                        {
+                            overlayNav &&
+                            <IoClose onClick={() => {
+                                setOverlayNav(false),
+                                    navToggle()
+                            }
+                            } />
+                        }
                     </div>
 
                 </div>
             </nav>
-            <div  className="responsiveNavbar responsiveNavbarClose" ref={navHideShow}>
-                <div className="main">
-                    <div className="up">
-                        <ul>
-                            <NavLink to="/">Home</NavLink>
-                            <NavLink to="/about">About</NavLink>
-                            <NavLink to="/projects">Projects</NavLink>
-                            <NavLink to="/contactUs">Contact Us</NavLink>
-                        </ul>
+            <div className="overlayclick">
+                <div className="responsiveNavbar responsiveNavbarClose" ref={navHideShow}>
+                    <div className="main">
+                        <div className="up">
+                            <ul>
+                                <NavLink onClick={() => {
+                                    setOverlayNav(false),
+                                        navToggle()
+                                }
+                                } to="/">Home</NavLink>
+                                <NavLink onClick={() => {
+                                    setOverlayNav(false),
+                                        navToggle()
+                                }
+                                } to="/about">About</NavLink>
+                                <NavLink onClick={() => {
+                                    setOverlayNav(false),
+                                        navToggle()
+                                }
+                                } to="/projects">Projects</NavLink>
+                                <NavLink onClick={() => {
+                                    setOverlayNav(false),
+                                        navToggle()
+                                }
+                                } to="/contactUs">Contact Us</NavLink>
+                            </ul>
+                        </div>
+                        <button >
+                            Sign in
+                        </button>
                     </div>
-                    <button >
-                        Sign in
-                    </button>
                 </div>
+                {
+                    overlayNav && <div onClick={() => {
+                        setOverlayNav(false),
+                            navToggle()
+                    }
+                    }
+                        className="overlay"></div>
+                }
             </div>
         </>
     )
