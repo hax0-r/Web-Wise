@@ -18,8 +18,8 @@
     src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-regular.otf);
 }
 
-.signIn {
-    background: url(../../assets/SignIn/signIn.png) center;
+.contactUs {
+    background: url(../../assets/ContactUs/contactUs.png) center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -111,38 +111,30 @@
                     letter-spacing: -2%;
                 }
 
-                p {
-                    padding-top: 8rem;
-                    color: rgb(122, 110, 140);
-                    font-family: Nekst-Regular;
-                    font-size: 1.26rem;
+                textarea {
+                    background-color: transparent;
+                    border: 0.06rem solid rgb(104, 92, 123);
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    margin-top: 1rem;
+                    opacity: 0.8;
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-Medium;
+                    font-size: 1.31rem;
                     font-weight: 400;
                     line-height: 95%;
-                    letter-spacing: -2%;
-                    text-align: left;
-                }
+                    letter-spacing: 0%;
+                    padding: 1rem 0 1rem 0;
 
-                #createAccountBtn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 2.5rem;
-                    background: transparent;
-                    gap: 1rem;
-                    border: none;
-                    padding: 1.4rem 1rem;
-                    color: rgb(255, 255, 255);
-                    font-family: Nekst-SemiBold;
-                    font-size: 1.55rem;
-                    font-weight: 400;
-                    line-height: 99%;
-                    letter-spacing: -2%;
-                    border: 0.06rem solid rgb(95, 41, 183);
-                    transition: 200ms all;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: rgb(95, 41, 183);
+                    &::placeholder {
+                        opacity: 0.7;
+                        color: rgb(140, 116, 180);
+                        font-family: Nekst-Regular;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 95%;
+                        letter-spacing: 0%;
                     }
                 }
             }
@@ -151,7 +143,7 @@
 }
 
 @media (max-width:1320px) {
-    .signIn {
+    .contactUs {
 
         .box {
 
@@ -175,7 +167,7 @@
 }
 
 @media (max-width:900px) {
-    .signIn {
+    .contactUs {
 
         .box {
             flex-direction: column;
@@ -192,7 +184,7 @@
 }
 
 @media (max-width:500px) {
-    .signIn {
+    .contactUs {
 
         .box {
             row-gap: 2rem;
@@ -234,15 +226,14 @@
                         font-size: 1.25rem;
                     }
 
-                    p {
-                        padding-top: 4rem;
-                        font-size: .8rem;
-                    }
+                    textarea {
+                        height: 3rem;
+                        font-size: 1rem;
+                        scrollbar-width: none;
 
-                    #createAccountBtn {
-                        padding: 1rem;
-                        margin-bottom: .5rem;
-                        font-size: 1.25rem;
+                        &::placeholder {
+                            font-size: 1rem;
+                        }
                     }
 
                 }

@@ -8,8 +8,8 @@ const NAV_DATA = [
         navPath: "/about"
     },
     {
-        navTitle: "Projects",
-        navPath: "/projects"
+        navTitle: "Partners",
+        navPath: "/partners"
     },
     {
         navTitle: "ContactUs",
