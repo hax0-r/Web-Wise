@@ -5,6 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { NAV_DATA } from '../Navbar/NAV_DATA';
 
 
 export default function Footer() {
@@ -23,7 +24,7 @@ export default function Footer() {
                             </svg>
                             <h1>Web Wise</h1>
                         </Link>
-                        <p>© 2024 <Link>Web Wise</Link>  ltd.</p>
+                        <p>© 2024 <Link to={NAV_DATA[0].navPath}>Web Wise</Link>  ltd.</p>
                     </div>
                     <div className="second">
                         <p>We are in social networks</p>
@@ -34,7 +35,7 @@ export default function Footer() {
                             <Link to="/"><FaTelegramPlane /></Link>
                             <Link to="/"><FaInstagram /></Link>
                         </div>
-                        <NavLink>info@capico.app</NavLink>
+                        <NavLink>Chota@ali.app</NavLink>
                     </div>
                     <div className="third">
                         <h1>Documents</h1>

@@ -20,21 +20,24 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        .left {
-            display: flex;
-            align-items: center;
-
-            h1 {
-                font-family: Nekst-Medium;
-                font-size: 35px;
-                font-weight: 600;
-                line-height: 99%;
-                text-decoration: none;
-                color: #ffffff;
-                letter-spacing: .1rem;
+        a{
+            text-decoration: none;
+            .left {
+                display: flex;
+                align-items: center;
+    
+                h1 {
+                    font-family: Nekst-Medium;
+                    font-size: 35px;
+                    font-weight: 600;
+                    line-height: 99%;
+                    text-decoration: none;
+                    color: #ffffff;
+                    letter-spacing: .1rem;
+                }
             }
         }
+
 
         .right {
             display: flex;
@@ -188,67 +191,6 @@ nav {
                 svg{
                     font-size: 1.8rem;
                 }
-
-                #checkbox2 {
-                    display: none;
-                }
-
-                .toggle2 {
-                    position: relative;
-                    width: 35px;
-                    height: 27px;
-                    cursor: pointer;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 6px;
-                    transition-duration: .5s;
-                    transform: rotate(-45deg);
-                }
-
-                .bars {
-                    width: 100%;
-                    height: 5.3px;
-                    background-color: #ffffff;
-                    border-radius: 6px;
-                }
-
-                #bar5 {
-                    transition-duration: .8s;
-                }
-
-                #bar4,
-                #bar6 {
-                    width: 80%;
-                }
-
-                #checkbox2:checked+.toggle2 .bars {
-                    position: absolute;
-                    transition-duration: .5s;
-                }
-
-                #checkbox2:checked+.toggle2 #bar5 {
-                    transform: scaleX(0);
-                    transition-duration: .5s;
-                }
-
-                #checkbox2:checked+.toggle2 #bar4 {
-                    width: 100%;
-                    transform: rotate(45deg);
-                    transition-duration: .5s;
-                }
-
-                #checkbox2:checked+.toggle2 #bar6 {
-                    width: 100%;
-                    transform: rotate(-45deg);
-                    transition-duration: .5s;
-                }
-
-                #checkbox2:checked+.toggle2 {
-                    transition-duration: .5s;
-                    transform: rotate(180deg);
-                }
             }
         }
     }
@@ -302,7 +244,7 @@ nav {
         width: 20rem;
         overflow: hidden;
         height: calc(100vh - 5rem);
-        transition: 200ms all;
+        transition: 300ms all;
         opacity: 1;
 
         .main {
@@ -352,24 +294,28 @@ nav {
                 }
             }
 
-            button {
-                padding: 1.4rem 0;
-                color: rgb(255, 255, 255);
-                font-family: Nekst-Medium;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 99%;
-                letter-spacing: -3%;
-                padding: 1.5rem 1rem;
-                transition: 300ms all;
-                background-color: transparent;
-                cursor: pointer;
-                border: none;
-                border-top: 2px solid #ffffff17;
-
-                &:hover {
-                    background-color: #ffffff17;
-                    border-top: 2px solid #ffffff00;
+            a{
+                button {
+                    padding: 1.4rem 0;
+                    color: rgb(255, 255, 255);
+                    font-family: Nekst-Medium;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 99%;
+                    letter-spacing: -3%;
+                    padding: 1.5rem 1rem;
+                    transition: 300ms all;
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: none;
+                    border-top: 2px solid #ffffff17;
+                    width: 100%;
+                    text-align: start;
+    
+                    &:hover {
+                        background-color: #ffffff17;
+                        border-top: 2px solid #ffffff00;
+                    }
                 }
             }
         }
