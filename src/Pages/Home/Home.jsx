@@ -17,7 +17,7 @@ export default function Home() {
           <div className="container">
             <video src={videoBG} muted loop autoPlay />
             <div className="inside">
-              <h1>Crypto trading <span> with bots and smart seals</span> </h1>
+              <h1>Top Ranked, <span>Brand builders in Pakistan</span> </h1>
               <button>Sign up now
                 <svg width="69" height="52" viewBox="0 0 69 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle opacity="0.4" cx="43.6328" cy="25.9141" r="24.9844" transform="rotate(-90 43.6328 25.9141)" stroke="white" strokeWidth="0.609375" />

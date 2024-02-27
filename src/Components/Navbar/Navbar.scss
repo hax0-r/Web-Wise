@@ -20,12 +20,14 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        a{
+
+        a {
             text-decoration: none;
+
             .left {
                 display: flex;
                 align-items: center;
-    
+
                 h1 {
                     font-family: Nekst-Medium;
                     font-size: 35px;
@@ -133,6 +135,42 @@ nav {
     }
 }
 
+
+@include media(1450px) {
+    nav {
+        .main {
+            a {
+                .left {
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            .right {
+                gap: 1.5rem;
+
+                ul {
+                    gap: .8rem;
+
+                    li {
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                button {
+                    font-size: 1.2rem;
+                    padding: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+
 @include media(1200px) {
     nav {
 
@@ -188,7 +226,8 @@ nav {
                 display: block;
                 color: #ffffff;
                 transition: 200ms all;
-                svg{
+
+                svg {
                     font-size: 1.8rem;
                 }
             }
@@ -294,7 +333,7 @@ nav {
                 }
             }
 
-            a{
+            a {
                 button {
                     padding: 1.4rem 0;
                     color: rgb(255, 255, 255);
@@ -311,7 +350,7 @@ nav {
                     border-top: 2px solid #ffffff17;
                     width: 100%;
                     text-align: start;
-    
+
                     &:hover {
                         background-color: #ffffff17;
                         border-top: 2px solid #ffffff00;

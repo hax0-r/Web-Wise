@@ -14,7 +14,11 @@ const NAV_DATA = [
     {
         navTitle: "ContactUs",
         navPath: "/contactUs"
-    }
+    },
+    {
+        navTitle: "Pricing",
+        navPath: "/pricing"
+    },
 ]
 const SIGN_IN = {
     signTitle: "Sign in",
