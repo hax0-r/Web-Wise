@@ -30,7 +30,7 @@ nav {
 
                 h1 {
                     font-family: Nekst-Medium;
-                    font-size: 35px;
+                    font-size: 2rem;
                     font-weight: 600;
                     line-height: 99%;
                     text-decoration: none;
@@ -136,7 +136,7 @@ nav {
 }
 
 
-@include media(1450px) {
+@include media(1486px) {
     nav {
         .main {
             a {

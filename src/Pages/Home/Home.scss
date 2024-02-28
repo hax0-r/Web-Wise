@@ -61,7 +61,7 @@
                         background: linear-gradient(251.46deg, #FFFFFF 13.67%, #5F29B7 124.09%);
                         -webkit-background-clip: text;
                         color: transparent;
-                        max-width: 47.81rem;
+                        max-width: 40rem;
                         width: 100%;
 
                     }
@@ -100,7 +100,6 @@
                         color: #FFFFFF;
                         white-space: nowrap;
 
-                        // animation: moving 5s linear infinite;
                         h1 {
                             padding: 1.95rem 4.9rem;
                             border-radius: 1.88rem;
@@ -113,16 +112,7 @@
             }
         }
 
-
-        @media (max-height:900px) {
-            .container {
-                .bottom {
-                    bottom: .7rem;
-                }
-            }
-        }
-
-        @include media(1280px) {
+        @include media(1486px) {
             .container {
                 min-height: unset;
                 padding: 5vw 3vw;
@@ -157,6 +147,15 @@
             }
 
         }
+
+        @media (max-height:900px) {
+            .container {
+                .bottom {
+                    bottom: .7rem;
+                }
+            }
+        }
+
 
         @include media(998px) {
             .container {
