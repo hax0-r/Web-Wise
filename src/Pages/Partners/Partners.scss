@@ -53,6 +53,16 @@
             }
         }
 
+
+
+        @media (max-width:1560px) {
+            .main {
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+
         @media (max-width:1100px) {
 
             .main {
@@ -138,6 +148,14 @@
             }
         }
 
+        @media (max-width:1560px) {
+            .main {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+
         @media (max-width:1200px) {
             .main {
                 h1 {
@@ -157,7 +175,7 @@
         @media (max-width:600px) {
             .main {
                 h1 {
-                    padding:  0 1rem 1.5rem 1rem;
+                    padding: 0 1rem 1.5rem 1rem;
                     font-size: 1.4rem;
                 }
             }
@@ -283,6 +301,17 @@
 
                     .swiper-slide:nth-child(10n) {
                         background-color: #6d45b9;
+                    }
+
+                }
+            }
+        }
+
+        @include media(1560px) {
+            .main {
+                .head {
+                    h1 {
+                        font-size: 3.5rem;
                     }
 
                 }

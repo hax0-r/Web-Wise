@@ -42,7 +42,6 @@
                 min-height: calc(100vh - 5rem);
                 object-fit: cover;
             }
-
             .inside {
 
                 padding: 5vw 0 0 5vw;
@@ -112,7 +111,7 @@
             }
         }
 
-        @include media(1486px) {
+        @include media(1560px) {
             .container {
                 min-height: unset;
                 padding: 5vw 3vw;
@@ -569,20 +568,20 @@
             }
         }
 
-        @include media(1460px) {
+        @include media(1560px) {
             .main {
 
                 .container {
                     .left {
                         img {
-                            max-width: 32rem;
+                            max-width: 30rem;
                             width: 100%;
                         }
                     }
 
                     .right {
                         h1 {
-                            font-size: 6rem;
+                            font-size: 5rem;
                         }
 
                         div {
@@ -823,22 +822,22 @@
         }
 
 
-        @include media(1440px) {
+        @include media(1560px) {
             .main {
                 .container {
                     .left {
                         h1 {
-                            font-size: 6rem;
+                            font-size: 5rem;
                         }
 
                         h4 {
-                            font-size: 2rem;
+                            font-size: 1.7rem;
                         }
                     }
 
                     .right {
                         img {
-                            max-width: 30rem;
+                            max-width: 27rem;
                             width: 100%;
                         }
                     }
@@ -1017,25 +1016,25 @@
             }
         }
 
-        @include media(1460px) {
+        @include media(1560px) {
             .main {
 
                 .container {
                     .left {
                         img {
-                            max-width: 32rem;
+                            max-width: 30rem;
                             width: 100%;
                         }
                     }
 
                     .right {
                         h1 {
-                            font-size: 6rem;
+                            font-size: 5rem;
                         }
 
                         div {
                             h5 {
-                                font-size: 2rem;
+                                font-size: 1.7rem;
                             }
 
                             p {
@@ -1436,15 +1435,15 @@
 
         }
 
-        @include media(1440px) {
+        @include media(1560px) {
             .main {
 
                 h1 {
-                    font-size: 6rem;
+                    font-size: 4.5rem;
                 }
 
                 p {
-                    font-size: 2rem;
+                    font-size: 1.7rem;
                 }
 
                 div {
@@ -1452,11 +1451,11 @@
                     button {
                         font-size: 2rem;
                         width: unset;
-                        padding: .5rem 3rem;
+                        padding: .2rem 2.5rem;
 
                         svg {
 
-                            width: 3rem;
+                            width: 4rem;
                         }
                     }
                 }
@@ -1611,8 +1610,13 @@
             }
         }
 
-        @include media(1383px) {
+        @include media(1560px) {
             .main {
+                .head {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+                }
 
                 .box {
 
@@ -1620,6 +1624,14 @@
                         max-width: 35rem;
                         width: 100%;
                     }
+                }
+            }
+        }
+
+        @include media(1383px) {
+            .main {
+
+                .box {
 
                     .right {
 
@@ -1657,7 +1669,7 @@
                     padding-top: 4vw;
 
                     img {
-                        max-width: 40rem;
+                        max-width: 35rem;
                         width: 100%;
                     }
 

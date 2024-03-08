@@ -79,6 +79,7 @@ nav {
                 }
             }
 
+
             button {
                 display: flex;
                 justify-content: center;
@@ -136,7 +137,7 @@ nav {
 }
 
 
-@include media(1486px) {
+@include media(1540px) {
     nav {
         .main {
             a {

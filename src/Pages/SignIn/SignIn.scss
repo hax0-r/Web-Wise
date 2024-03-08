@@ -148,6 +148,40 @@
             }
         }
     }
+
+    @media (max-width:1560px) {
+        .box {
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            .right {
+                .main {
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+
+                    .inputs {
+                        input {
+                            font-size: 1rem;
+
+                            &::placeholder {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 1.16rem;
+                    }
+
+                    #createAccountBtn {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:1320px) {
