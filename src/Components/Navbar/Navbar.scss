@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Nekst-Medium;
-    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-medium.otf);
+    font-family: NekstMedium;
+    src: url(../../Nekst/Nekst-Medium.otf);
 }
 
 @mixin media($width) {
@@ -28,14 +28,32 @@ nav {
                 display: flex;
                 align-items: center;
 
-                h1 {
-                    font-family: Nekst-Medium;
-                    font-size: 2rem;
-                    font-weight: 600;
+                h2 {
+                    font-family: NekstMedium;
+                    font-size: 3.1rem;
+                    font-weight: 500;
                     line-height: 99%;
                     text-decoration: none;
                     color: #ffffff;
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
                     letter-spacing: .1rem;
+                }
+
+                h1 {
+                    font-family: NekstMedium;
+                    font-size: 1.3rem;
+                    padding-left: .5rem;
+                    font-weight: 600;
+                    line-height: 95%;
+                    text-decoration: none;
+                    color: #ffffff;
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                    letter-spacing: .1rem;
+                }
+
+                .char {
+                    transform: translateY(115px);
+                    transition: transform .5s;
                 }
             }
         }
@@ -58,7 +76,7 @@ nav {
 
                     a {
                         color: rgb(255, 255, 255);
-                        font-family: Nekst-Medium;
+                        font-family: NekstMedium;
                         font-size: 20px;
                         font-weight: 400;
                         line-height: 99%;
@@ -77,6 +95,41 @@ nav {
                         color: #904bff;
                     }
                 }
+
+                .servicesDropDown {
+                    color: #fff;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    ul {
+                        z-index: -1;
+                        opacity: 0;
+                        visibility: hidden;
+                        position: absolute;
+                        gap: 0;
+                        top: 5rem;
+                        display: flex;
+                        flex-direction: column;
+                        transition: 300ms all;
+
+                        li {
+                            background-color: #333333;
+                            padding: 1rem 2rem;
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            top: 3rem;
+                            z-index: 1;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                    }
+                }
             }
 
 
@@ -89,7 +142,7 @@ nav {
                 background: rgb(95, 41, 183);
                 border: none;
                 color: rgb(255, 255, 255);
-                font-family: Nekst-Medium;
+                font-family: NekstMedium;
                 font-size: 20px;
                 font-weight: 400;
                 letter-spacing: -3%;
@@ -137,13 +190,13 @@ nav {
 }
 
 
-@include media(1540px) {
+@include media(3000px) {
     nav {
         .main {
             a {
                 .left {
                     h1 {
-                        font-size: 1.7rem;
+                        font-size: 1.3rem;
                     }
                 }
             }
@@ -308,7 +361,7 @@ nav {
                     a {
                         border-radius: 10px;
                         color: rgb(255, 255, 255);
-                        font-family: Nekst-Medium;
+                        font-family: NekstMedium;
                         font-size: 20px;
                         font-weight: 400;
                         line-height: 99%;
@@ -338,7 +391,7 @@ nav {
                 button {
                     padding: 1.4rem 0;
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Medium;
+                    font-family: NekstMedium;
                     font-size: 20px;
                     font-weight: 400;
                     line-height: 99%;

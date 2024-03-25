@@ -32,7 +32,7 @@
                     text;
                 text-fill-color:
                     transparent;
-                font-family: Nekst-Light;
+                font-family: NekstLight;
                 font-size: 6rem;
                 font-weight: 400;
                 line-height: 75%;
@@ -44,7 +44,7 @@
 
             p {
                 color: rgb(176, 163, 201);
-                font-family: Nekst-Light;
+                font-family: NekstLight;
                 font-size: 1.4rem;
                 font-weight: 400;
                 line-height: 113%;
@@ -137,7 +137,7 @@
                     text;
                 text-fill-color:
                     transparent;
-                font-family: Nekst-Light;
+                font-family: NekstLight;
                 font-size: 3.5rem;
                 text-align: center;
                 font-weight: 400;
@@ -204,7 +204,7 @@
 
                 h1 {
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-SemiBold;
+                    font-family: NekstSemiBold;
                     font-size: 4.38rem;
                     font-weight: 400;
                     line-height: 93%;
@@ -213,7 +213,7 @@
 
                 p {
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 0.94rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -232,8 +232,8 @@
                 .left {
                     ul {
                         li {
-                            list-style: nnpm one;
-                            font-family: Nekst-Medium;
+                            // list-style: nnpm one;
+                            font-family: NekstMedium;
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 150%;
@@ -260,6 +260,7 @@
                         border-radius: 18px;
                         font-size: 22px;
                         font-weight: bold;
+                        font-family: NekstSemiBold;
                         color: #fff;
                     }
 

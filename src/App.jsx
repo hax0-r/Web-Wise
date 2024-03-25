@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+    {/* <Earth/> */}
       <Navbar />
       <Router />
       <ToastContainer

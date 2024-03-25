@@ -5,23 +5,24 @@
 }
 
 @font-face {
-    font-family: Nekst-Medium;
-    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-medium.otf);
+    font-family: NekstMedium;
+    src: url(../../Nekst/Nekst-Medium.otf);
+
 }
 
 @font-face {
-    font-family: Nekst-SemiBold;
-    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-semibold.otf);
+    font-family: NekstSemiBold;
+    src: url(../../Nekst/Nekst-SemiBold.otf);
 }
 
 @font-face {
-    font-family: Nekst-light;
-    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-light.otf);
+    font-family: NekstLight;
+    src: url(../../Nekst/Nekst-Light.otf);
 }
 
 @font-face {
-    font-family: Nekst-regular;
-    src: url(../../Demo_Fonts/Fontspring-DEMO-nekst-regular.otf);
+    font-family: NekstRegular;
+    src: url(../../Nekst/Nekst-Regular.otf);
 }
 
 .home {
@@ -42,6 +43,7 @@
                 min-height: calc(100vh - 5rem);
                 object-fit: cover;
             }
+
             .inside {
 
                 padding: 5vw 0 0 5vw;
@@ -54,9 +56,11 @@
                     line-height: 95%;
                     letter-spacing: -2%;
                     margin-bottom: 2.2rem;
+                    font-family: NekstMedium;
                     color: #FFFFFF;
 
                     span {
+                        font-family: NekstMedium;
                         background: linear-gradient(251.46deg, #FFFFFF 13.67%, #5F29B7 124.09%);
                         -webkit-background-clip: text;
                         color: transparent;
@@ -81,6 +85,7 @@
                     line-height: 93%;
                     cursor: pointer;
                     letter-spacing: -3%;
+                    font-family: NekstMedium;
                 }
             }
 
@@ -103,7 +108,7 @@
                             padding: 1.95rem 4.9rem;
                             border-radius: 1.88rem;
                             background: rgb(14, 9, 21);
-                            font-family: Nekst-regular;
+                            font-family: NekstRegular;
                             letter-spacing: .1rem;
                         }
                     }
@@ -111,7 +116,7 @@
             }
         }
 
-        @include media(1560px) {
+        @include media(3000px) {
             .container {
                 min-height: unset;
                 padding: 5vw 3vw;
@@ -197,13 +202,167 @@
         }
     }
 
+    .Services {
+        background-color: #000;
+        padding: 3vw 3rem;
+
+        .main {
+            .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 2px solid #ffffff31;
+                border-bottom: none;
+                border-radius: 1rem;
+                padding-top: 1rem;
+
+                h1 {
+                    padding-left: 2.5rem;
+                    color: rgb(255, 255, 255);
+                    font-family: NekstMedium;
+                    font-size: 4rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+
+                p {
+                    padding-right: 2.5rem;
+                    color: rgb(143, 136, 154);
+                    font-family: NekstRegular;
+                    font-size: 0.84rem;
+                    font-weight: 400;
+                    line-height: 103%;
+                    letter-spacing: -4%;
+                }
+            }
+
+            .box {
+                display: flex;
+                gap: 1.5rem;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 10vw;
+
+                .right {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+
+                    .card {
+                        width: 19rem;
+                        padding: 1.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 25.75rem;
+                        border: 0.06rem solid rgb(64, 46, 92);
+                        border-radius: 2.5rem;
+                        opacity: 0.7;
+
+                        h2 {
+                            color: rgb(255, 255, 255);
+                            font-family: NekstMedium;
+                            font-size: 2.13rem;
+                            font-weight: 400;
+                            line-height: 93%;
+                            letter-spacing: -4%;
+                        }
+
+                        p {
+                            color: rgb(233, 227, 244);
+                            font-family: NekstRegular;
+                            width: 12.88rem;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            opacity: 0.8;
+                            line-height: 135%;
+                            letter-spacing: -4%;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        @include media(3000px) {
+            .main {
+                .head {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        @include media(1383px) {
+            .main {
+
+                .box {
+
+                    .right {
+
+                        .card {
+                            width: 18rem;
+                            height: 24rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(1272px) {
+            .main {
+                .head {
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                }
+            }
+        }
+
+        @include media(1192px) {
+            .main {
+                .box {
+                    .right {
+
+                        .card {
+                            width: 19rem;
+                            height: 25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(768px) {
+            .main {
+                .head {
+                    h1 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
     .page2 {
         background-color: #000;
 
         .main {
             position: relative;
             padding: 7vw 3vw;
-            min-height: 150vh;
+            // min-height: 150vh;
             background: url(../../assets/Home/page2Bg.png) center;
             background-size: cover;
 
@@ -222,12 +381,12 @@
                     font-size: 2.75rem;
                     font-weight: 400;
                     line-height: 93%;
-                    font-family: Nekst-Light;
+                    font-family: NekstLight;
                     letter-spacing: -4%;
                 }
 
                 p {
-                    font-family: Nekst-Light;
+                    font-family: NekstLight;
                     color: rgb(145, 145, 145);
                     font-size: 0.84rem;
                     font-weight: 400;
@@ -241,7 +400,7 @@
                 h1 {
                     color: rgb(255, 255, 255);
                     font-size: 8rem;
-                    font-family: Nekst-Light;
+                    font-family: NekstLight;
                     font-weight: 400;
                     line-height: 93%;
                     letter-spacing: -4%;
@@ -250,11 +409,11 @@
 
                 h5 {
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 2.2rem;
                     font-weight: 400;
                     line-height: 103%;
-                    letter-spacing: -4%;
+                    letter-spacing: .1rem;
                     text-align: left;
                 }
             }
@@ -282,7 +441,7 @@
 
                     h1 {
                         color: rgb(255, 255, 255);
-                        font-family: Nekst-Light;
+                        font-family: NekstLight;
                         font-size: 3.5rem;
                         font-weight: 400;
                         line-height: 93%;
@@ -291,7 +450,7 @@
 
                     p {
                         color: rgb(255, 255, 255);
-                        font-family: Nekst-Regular;
+                        font-family: NekstRegular;
                         font-size: 1.1rem;
                         font-weight: 400;
                         line-height: 103%;
@@ -313,7 +472,7 @@
 
                 p {
                     color: rgb(110, 100, 125);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 0.94rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -321,15 +480,27 @@
                 }
             }
 
-            @include media(1280px) {
-                .total {
+            .pg2Container{
+                margin: auto;
+                max-width: 80rem;
+                width: 100%;
+            }
 
+            @include media(2000px) {
+                .numbers {
                     h1 {
-                        font-size: 7rem;
+                        font-size: 1.5rem;
+                        line-height: 3rem;
+                    }
+                }
+
+                .total {
+                    h1 {
+                        font-size: 5rem;
                     }
 
                     h5 {
-                        font-size: 2rem;
+                        font-size: 1.2rem;
                     }
                 }
 
@@ -342,6 +513,17 @@
 
                     .card {
                         margin: 0 1rem 1rem 0;
+
+                        width: 19rem;
+                        height: 15rem;
+
+                        h1 {
+                            font-size: 2.5rem;
+                        }
+
+                        p {
+                            font-size: 1.1rem;
+                        }
 
                     }
 
@@ -383,7 +565,7 @@
 
                     p {
                         color: rgb(110, 100, 125);
-                        font-family: Nekst-Regular;
+                        font-family: NekstRegular;
                         font-size: 0.94rem;
                         font-weight: 400;
                         line-height: 103%;
@@ -494,15 +676,15 @@
 
                 h1 {
                     color: rgb(255, 255, 255);
-                    font-size: 2.75rem;
+                    font-size: 2rem;
                     font-weight: 400;
-                    line-height: 93%;
-                    font-family: Nekst-Light;
+                    line-height: 3rem;
+                    font-family: NekstLight;
                     letter-spacing: -4%;
                 }
 
                 p {
-                    font-family: Nekst-Light;
+                    font-family: NekstLight;
                     color: rgb(145, 145, 145);
                     font-size: 0.84rem;
                     font-weight: 400;
@@ -536,7 +718,7 @@
                             text;
                         text-fill-color:
                             transparent;
-                        font-family: Nekst-Light;
+                        font-family: NekstLight;
                         font-size: 8.13rem;
                         font-weight: 400;
                         line-height: 93%;
@@ -547,7 +729,7 @@
                     div {
                         h5 {
                             color: rgb(255, 255, 255);
-                            font-family: Nekst-Regular;
+                            font-family: NekstRegular;
                             font-size: 2.5rem;
                             font-weight: 400;
                             line-height: 93%;
@@ -557,7 +739,7 @@
 
                         p {
                             color: rgb(183, 177, 196);
-                            font-family: Nekst-Regular;
+                            font-family: NekstRegular;
                             font-size: 1.13rem;
                             font-weight: 300;
                             line-height: 103%;
@@ -568,7 +750,7 @@
             }
         }
 
-        @include media(1560px) {
+        @include media(3000px) {
             .main {
 
                 .container {
@@ -581,7 +763,7 @@
 
                     .right {
                         h1 {
-                            font-size: 5rem;
+                            font-size: 4rem;
                         }
 
                         div {
@@ -776,7 +958,6 @@
                     gap: 2rem;
 
                     h1 {
-                        border: 2px solid #5e28b6;
                         border-radius: 1rem;
                         border-bottom: none;
                         border-left: none;
@@ -787,7 +968,7 @@
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
                         text-fill-color: transparent;
-                        font-family: Nekst-Light;
+                        font-family: NekstLight;
                         font-size: 8.13rem;
                         font-weight: 400;
                         line-height: 93%;
@@ -796,16 +977,16 @@
 
                     h4 {
                         color: rgb(123, 112, 141);
-                        font-family: Nekst-Medium;
+                        font-family: NekstMedium;
                         font-size: 2.5rem;
                         font-weight: 400;
                         line-height: 108%;
                         letter-spacing: -4%;
-                        max-width: 35.69rem;
+                        max-width: 30rem;
                         width: 100%;
 
                         span {
-                            font-family: Nekst-Light;
+                            font-family: NekstLight;
                             font-weight: 600;
                             color: #FFFFFF;
                         }
@@ -822,12 +1003,12 @@
         }
 
 
-        @include media(1560px) {
+        @include media(3000px) {
             .main {
                 .container {
                     .left {
                         h1 {
-                            font-size: 5rem;
+                            font-size: 4rem;
                         }
 
                         h4 {
@@ -837,7 +1018,7 @@
 
                     .right {
                         img {
-                            max-width: 27rem;
+                            max-width: 25rem;
                             width: 100%;
                         }
                     }
@@ -982,7 +1163,7 @@
                             text;
                         text-fill-color:
                             transparent;
-                        font-family: Nekst-Light;
+                        font-family: NekstLight;
                         font-size: 8.13rem;
                         font-weight: 400;
                         line-height: 93%;
@@ -993,7 +1174,7 @@
                     div {
                         h5 {
                             color: rgb(255, 255, 255);
-                            font-family: Nekst-Regular;
+                            font-family: NekstRegular;
                             font-size: 2.5rem;
                             font-weight: 400;
                             line-height: 93%;
@@ -1005,7 +1186,7 @@
 
                         p {
                             color: rgb(183, 177, 196);
-                            font-family: Nekst-Regular;
+                            font-family: NekstRegular;
                             font-size: 1.13rem;
                             font-weight: 300;
                             line-height: 103%;
@@ -1016,7 +1197,7 @@
             }
         }
 
-        @include media(1560px) {
+        @include media(3000px) {
             .main {
 
                 .container {
@@ -1029,12 +1210,12 @@
 
                     .right {
                         h1 {
-                            font-size: 5rem;
+                            font-size: 4rem;
                         }
 
                         div {
                             h5 {
-                                font-size: 1.7rem;
+                                font-size: 1.5rem;
                             }
 
                             p {
@@ -1211,8 +1392,8 @@
 
                 h1 {
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-SemiBold;
-                    font-size: 3.38rem;
+                    font-family: NekstSemiBold;
+                    font-size: 2rem;
                     font-weight: 400;
                     line-height: 93%;
                     letter-spacing: -4%;
@@ -1220,7 +1401,7 @@
 
                 p {
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 0.84rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -1240,7 +1421,7 @@
                     ul {
                         li {
                             list-style: nnpm one;
-                            font-family: Nekst-Medium;
+                            font-family: NekstMedium;
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 150%;
@@ -1267,6 +1448,7 @@
                         border-radius: 18px;
                         font-size: 22px;
                         font-weight: bold;
+                        font-family: NekstSemiBold;
                         color: #fff;
                     }
 
@@ -1390,7 +1572,7 @@
                 border-bottom: none;
                 border-radius: 1rem;
                 color: rgb(255, 255, 255);
-                font-family: Nekst-Regular;
+                font-family: NekstRegular;
                 font-size: 8.13rem;
                 font-weight: 400;
                 line-height: 93%;
@@ -1399,13 +1581,14 @@
 
             p {
                 color: rgb(255, 255, 255);
-                font-family: Nekst-Regular;
-                font-size: 2.5rem;
+                font-family: NekstRegular;
+                font-size: 1.5rem;
                 font-weight: 400;
                 line-height: 120%;
-                max-width: 25.88rem;
+                max-width: 30rem;
                 width: 100%;
                 letter-spacing: -4%;
+                text-shadow: 2px 1px 25px rgba(0, 0, 0, 1);
             }
 
             div {
@@ -1420,7 +1603,7 @@
                     align-items: center;
                     gap: 2rem;
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-SemiBold;
+                    font-family: NekstSemiBold;
                     border: none;
                     font-size: 2.81rem;
                     font-weight: 400;
@@ -1435,27 +1618,28 @@
 
         }
 
-        @include media(1560px) {
+        @include media(3000px) {
             .main {
 
                 h1 {
-                    font-size: 4.5rem;
+                    font-size: 2.5rem;
+                    line-height: 3rem;
                 }
 
                 p {
-                    font-size: 1.7rem;
+                    font-size: 1.2rem;
                 }
 
                 div {
 
                     button {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         width: unset;
-                        padding: .2rem 2.5rem;
+                        padding: 0rem 2rem;
 
                         svg {
 
-                            width: 4rem;
+                            width: 3rem;
                         }
                     }
                 }
@@ -1542,7 +1726,7 @@
                 h1 {
                     padding-left: 2.5rem;
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Medium;
+                    font-family: NekstMedium;
                     font-size: 4rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -1552,7 +1736,7 @@
                 p {
                     padding-right: 2.5rem;
                     color: rgb(143, 136, 154);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 0.84rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -1587,7 +1771,7 @@
 
                         h2 {
                             color: rgb(255, 255, 255);
-                            font-family: Nekst-Medium;
+                            font-family: NekstMedium;
                             font-size: 2.13rem;
                             font-weight: 400;
                             line-height: 93%;
@@ -1596,7 +1780,7 @@
 
                         p {
                             color: rgb(233, 227, 244);
-                            font-family: Nekst-regular;
+                            font-family: NekstRegular;
                             width: 12.88rem;
                             font-size: 1rem;
                             font-weight: 400;
@@ -1610,18 +1794,18 @@
             }
         }
 
-        @include media(1560px) {
+        @include media(3000px) {
             .main {
                 .head {
                     h1 {
-                        font-size: 2.5rem;
+                        font-size: 2rem;
                     }
                 }
 
                 .box {
 
                     img {
-                        max-width: 35rem;
+                        max-width: 32rem;
                         width: 100%;
                     }
                 }
@@ -1747,7 +1931,7 @@
                 h1 {
                     padding-left: 2.5rem;
                     color: rgb(255, 255, 255);
-                    font-family: Nekst-Medium;
+                    font-family: NekstMedium;
                     font-size: 5.63rem;
                     font-weight: 400;
                     line-height: 103%;
@@ -1756,7 +1940,7 @@
 
                 p {
                     color: rgb(143, 136, 154);
-                    font-family: Nekst-Regular;
+                    font-family: NekstRegular;
                     font-size: 2.5rem;
                     font-weight: 400;
                     line-height: 100%;
@@ -1788,7 +1972,7 @@
                         border-radius: 2.5rem;
                         opacity: 0.7;
                         color: #ffffff;
-                        font-family: Nekst-Medium;
+                        font-family: NekstMedium;
                         font-size: 2rem;
                         font-weight: 400;
                         line-height: 103%;
@@ -1798,7 +1982,7 @@
                     p {
                         padding: 1rem 0 0 .4rem;
                         color: rgb(170, 135, 226);
-                        font-family: Nekst-Medium;
+                        font-family: NekstMedium;
                         font-size: 0.75rem;
                         font-weight: 400;
                         line-height: 125%;
@@ -1813,12 +1997,12 @@
                 .head {
 
                     h1 {
-                        font-size: 4rem;
+                        font-size: 2rem;
                     }
 
                     p {
-                        font-size: 1.5rem;
-                        width: 30rem;
+                        font-size: 1rem;
+                        width: 20rem;
                     }
                 }
             }
@@ -1921,13 +2105,13 @@
                     text;
                 text-fill-color:
                     transparent;
-                font-family: Nekst-Regular;
-                font-size: 5rem;
+                font-family: NekstRegular;
+                font-size: 4rem;
                 font-weight: 400;
                 line-height: 93%;
                 letter-spacing: -4%;
                 text-align: center;
-                max-width: 50rem;
+                max-width: 40rem;
                 width: 100%;
             }
 
@@ -1938,18 +2122,18 @@
                 align-items: center;
                 gap: 2rem;
                 color: rgb(255, 255, 255);
-                font-family: Nekst-SemiBold;
+                font-family: NekstSemiBold;
                 border: none;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: 400;
                 line-height: 93%;
                 letter-spacing: -4%;
                 border-radius: 4.38rem;
                 background: rgb(95, 41, 183);
-                padding: .5rem 3rem;
+                padding: 0rem 2rem;
 
                 svg {
-                    width: 3.5rem;
+                    width: 3rem;
                 }
             }
         }
